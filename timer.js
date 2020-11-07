@@ -53,12 +53,13 @@ const displayCurrentTimeLeft = () => {
         }
     }
 
-    minutes = addLeadingZeros(minutes);
+    //minutes = addLeadingZeros(minutes);
     // trying two different methods to see if the addleadingzeros is the problem
     //document.getElementById("mins").innerHTML = minutes.toString
    // document.getElementById("secs").innerHTML = seconds.toString
-    let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
-    pomodoroTimer.innerText = result.toString();
+    //let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
+    let result = `${minutes}:${seconds}`;
+    document.getElementById("pomodoro-timer").innerHTML = result.toString();
 
 
 }
@@ -78,17 +79,18 @@ function toggleClock (reset){
         stopTimer();
     }else{
         // Toggle the state of the timer
-        if(timerRunning){
-            // stop timer
-            clearInterval(timerHandler);
-            timerRunning = !timerRunning;
-        }else{
+        if(!timerRunning){
             // start timer
             timerRunning = !timerRunning;
             timerHandler = setInterval(() => {
                 timeLeft--;
                 displayCurrentTimeLeft();
             }, 1000)
+            
+        }else{
+            // stop timer
+            clearInterval(timerHandler);
+            timerRunning = !timerRunning;
         }
         
     }
@@ -97,12 +99,12 @@ function toggleClock (reset){
 
 // Start
 startButton.addEventListener('click', () => {
-    toggleClock();
+    toggleClock(false);
 })
 
 // Pause
 pauseButton.addEventListener('click', () => {
-    toggleClock();
+    toggleClock(false);
 })
 
 // Stop
