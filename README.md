@@ -1,2 +1,2 @@
-Toasty is a webpage for students to use on their long evenings of studying.
+Warm up by the fire on your long evenings of studying.
 https://mymyxtran.github.io/toasty/

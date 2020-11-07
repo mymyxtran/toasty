@@ -14,9 +14,13 @@
       height: 100%;
       margin: 0;
     }
+    .columns{
+      margin: 15px ;
+    }
     .background {
         /*the image to use*/
         background-image: url('photos/fireplace_cabin.gif');
+        background-color: #555;
         /*full height*/
         height: 100%;
         /* Center and scale the image nicely */
@@ -24,27 +28,121 @@
         background-position: center;
         background-size: cover; 
     }
-    /* Create three unequal columns that floats next to each other */
-    .column {
-      float: left;
+    /* Include the padding and border in an element's total width and height */
+    * {
+    box-sizing: border-box;
+    }
+
+    /* Remove margins and padding from the list */
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style the list items */
+    ul li {
+      cursor: pointer;
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      background: #eee;
+      font-size: 18px;
+      transition: 0.2s;
+
+      /* make the list items unselectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Set all odd list items to a different color (zebra-stripes) */
+    ul li:nth-child(odd) {
+      background: #f9f9f9;
+    }
+
+    /* Darker background-color on hover */
+    ul li:hover {
+      background: #ddd;
+    }
+
+    /* When clicked on, add a background color and strike out text */
+    ul li.checked {
+      background: #888;
+      color: #fff;
+      text-decoration: line-through;
+    }
+
+    /* Add a "checked" mark when clicked on */
+    ul li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: #fff;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      top: 10px;
+      left: 16px;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 7px;
+    }
+
+    /* Style the close button */
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+    }
+
+    .close:hover {
+      background-color: #F7F6F4;
+      color: white;
+    }
+
+    /* Style the header */
+    .header {
+      background-color: #F7F6F4;
+      b
+      padding: 30px 40px;
+      color: white;
+      text-align: center;
+    }
+
+    /* Clear floats after the header */
+    .header:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Style the input */
+    input {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      width: 75%;
       padding: 10px;
+      float: left;
+      font-size: 16px;
     }
 
-    /* Left and right column */
-    .column.side {
+    /* Style the "Add" button */
+    .addBtn {
+      padding: 10px;
       width: 25%;
+      background: #d9d9d9;
+      color: #555;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0;
     }
-      /* Middle column */
-      .column.middle {
-        width: 50%;
-      }
 
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+    .addBtn:hover {
+      background-color: #bbb;
+    }
   </style> 
 
   <body>
@@ -53,14 +151,18 @@
 
       <section class="section">
         <div class="container">
-          <h1 class="has-text-white"> Stay <strong class="has-text-white">Toasty 🔥</strong> </h1>
+          <h1 class="has-text-weight-bold">
+            <h1 class="is-size-2">
+             <h1 class=" has-text-white"> Stay <strong class="has-text-white">Toasty 🔥</strong> 
+          </h1>
         
         </div>
       </section>
 
-      <div class="row">
-        <div class="column side">
-          <h2 class="has-text-white">Toasty Timer 🔥</h2>
+    <div class="columns">
+
+      <div class="column">
+        <h2 class="has-text-white">Toasty Timer 🔥</h2>
           <div id="pomodoro-container">
             <div id="pomodoro-timer">
               <p class="has-text-white" id ="mins">25</p>
@@ -74,33 +176,97 @@
               <button id="affirm", onclick="Affirm()">Affirmation</button>
               <p class="has-text-white" id="Affirming"></p>
             </div>
-          </div>
-        </div>
-        
-        <div class="column middle">
-          <h2 class="has-text-white">Things done!</h2>
-        </div>
-        
-        <div class="column side">
-          <h2 class="has-text-white">To Do</h2>
-          <p class="has-text-white">Things I need to do</p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
         </div>
       </div>
+
+      <div class="column">
+        <div class="block">
+        <h2 class="has-text-white">Tunes</h2>
+        <audio src="CozyChristmasJazzy.m4a" controls>	
+          <p>Fallback content goes here.</p>
+          </audio>
+  
+        </div>
+      </div>
+
+
+      <div class="column">
+        <div class="box">
+              <div class="content">
+                <p>
+                  <strong>To Do List </strong>
+                  <br> 
+                  <div id="myDIV" class="header">
+                    <h2>My To Do List</h2>
+                    <input type="text" id="myInput" placeholder="Title...">
+                    <span onclick="newElement()" class="addBtn">Add</span>
+                  </div>
+                  <ul id="myUL">
+                </p>
+              </div>   
+          </div>
+       </div>
+      </div> 
+
     </div>
 
+    <script> 
+      // Create a "close" button and append it to each list item
+        var myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          myNodelist[i].appendChild(span);
+        }
 
+        // Click on a close button to hide the current list item
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+          }
+        }, false);
+
+        // Create a new list item when clicking on the "Add" button
+        function newElement() {
+          var li = document.createElement("li");
+          var inputValue = document.getElementById("myInput").value;
+          var t = document.createTextNode(inputValue);
+          li.appendChild(t);
+          if (inputValue === '') {
+            alert("You must write something!");
+          } else {
+            document.getElementById("myUL").appendChild(li);
+          }
+          document.getElementById("myInput").value = "";
+
+          var span = document.createElement("SPAN");
+          var txt = document.createTextNode("\u00D7");
+          span.className = "close";
+          span.appendChild(txt);
+          li.appendChild(span);
+
+          for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+              var div = this.parentElement;
+              div.style.display = "none";
+            }
+          }
+        }
+        </script>
   </body>
 
 
