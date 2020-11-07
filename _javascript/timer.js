@@ -10,6 +10,8 @@ const lBreakState = -3;
 var timeLeft = 25*60;
 var timerRunning = false;
 var currState = workState;
+document.getElementById("mins").innerHTML = "25"
+document.getElementById("secs").innerHTML = "00"
 
 //Listeners
 const pomodoroTimer = document.querySelector('#pomodoro-timer');
@@ -29,8 +31,12 @@ const displayCurrentTimeLeft = () => {
         }
     }
 
-    let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
-    pomodoroTimer.innerText = result.toString();
+    minutes = addLeadingZeros(minutes);
+    // trying two different methods to see if the addleadingzeros is the problem
+    document.getElementById("mins").innerHTML = minutes.toString
+    document.getElementById("secs").innerHTML = seconds.toString
+    //let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
+    //pomodoroTimer.innerText = result.toString();
 
 
 }
