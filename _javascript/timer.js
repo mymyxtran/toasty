@@ -30,7 +30,7 @@ const displayCurrentTimeLeft = () => {
     }
 
     let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
-    document.getElementById('time-result').innerHTML = result.toString();
+    pomodoroTimer.innerText = result.toString();
 
 
 }
