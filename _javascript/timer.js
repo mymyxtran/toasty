@@ -46,7 +46,9 @@ function stopTimer(){
     timeLeft = workingTimeTotal;
     timerRunning = false;
     clearInterval(timerHandler);
-    displayCurrentTimeLeft;
+    document.getElementById("mins").innerHTML = "25"
+    document.getElementById("secs").innerHTML = "00"
+    //displayCurrentTimeLeft;
 }
 
 const toggleClock = (reset) => {
