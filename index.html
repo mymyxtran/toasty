@@ -164,15 +164,15 @@
       <div class="column">
         <h2 class="has-text-white">Toasty Timer 🔥</h2>
           <div id="pomodoro-container">
-            <div id="pomodoro-timer">
+            <div class="has-text-white" id="pomodoro-timer">
               <p class="has-text-white" id ="mins">25</p>
               <p class="has-text-white" id="colon">:</p>
               <p  class="has-text-white" id="secs">00</p>
             </div>
             <div id="pomodoro-buttons">
-              <button id="start">Start Working</button>
-              <button id="pause">Pause</button>
-              <button id="stop">Stop</button>
+              <button id="start" onclick="toggleClock(false)">Start Working</button>
+              <button id="pause", onclick="toggleClock()">Pause</button>
+              <button id="stop" onclick="toggleClock(true)">Stop</button>
               <button id="affirm", onclick="Affirm()">Affirmation</button>
               <p class="has-text-white" id="Affirming"></p>
             </div>

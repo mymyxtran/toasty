@@ -24,7 +24,7 @@ function Affirm(){
     if(!affirmOn){
         document.getElementById("Affirming").innerHTML = "You're doing great!";
     }else{
-        document.getElementById("Affirming").innerHTML = "";
+        document.getElementById("Affirming").innerHTML = "Keep at it!";
     }
     affirmOn = !affirmOn;
 
