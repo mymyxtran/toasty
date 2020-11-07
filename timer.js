@@ -10,20 +10,27 @@ const lBreakState = -3;
 var timeLeft = 25*60;
 var timerRunning = false;
 var currState = workState;
+var affirmOn = false;
 
 //Listeners
-/*
+
 const pomodoroTimer = document.querySelector('#pomodoro-timer');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 const stopButton = document.querySelector('#stop');
-*/
+
 
 function Affirm(){
-    document.getElementById("Affirming").innerHTML = "You're doing great!";
+    if(!affirmOn){
+        document.getElementById("Affirming").innerHTML = "You're doing great!";
+    }else{
+        document.getElementById("Affirming").innerHTML = "";
+    }
+    affirmOn = !affirmOn;
 
 }
 
+/*
 document.querySelector('#stop').onclick = function(){
     currState = workState;
     timeLeft = workingTimeTotal;
@@ -32,6 +39,7 @@ document.querySelector('#stop').onclick = function(){
     document.getElementById("mins").innerHTML = "25"
     document.getElementById("secs").innerHTML = "00"   
 }
+*/
 
 const displayCurrentTimeLeft = () => {
     var seconds = timeLeft%60;
@@ -47,10 +55,10 @@ const displayCurrentTimeLeft = () => {
 
     minutes = addLeadingZeros(minutes);
     // trying two different methods to see if the addleadingzeros is the problem
-    document.getElementById("mins").innerHTML = minutes.toString
-    document.getElementById("secs").innerHTML = seconds.toString
-    //let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
-    //pomodoroTimer.innerText = result.toString();
+    //document.getElementById("mins").innerHTML = minutes.toString
+   // document.getElementById("secs").innerHTML = seconds.toString
+    let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
+    pomodoroTimer.innerText = result.toString();
 
 
 }
@@ -60,9 +68,9 @@ function stopTimer(){
     timeLeft = workingTimeTotal;
     timerRunning = false;
     clearInterval(timerHandler);
-    document.getElementById("mins").innerHTML = "25"
-    document.getElementById("secs").innerHTML = "00"
-    //displayCurrentTimeLeft;
+    //document.getElementById("mins").innerHTML = "25"
+    //document.getElementById("secs").innerHTML = "00"
+    displayCurrentTimeLeft;
 }
 
 const toggleClock = (reset) => {
@@ -86,7 +94,7 @@ const toggleClock = (reset) => {
     }
 }
 
-/*
+
 // Start
 startButton.addEventListener('click', () => {
     toggleClock();
@@ -101,4 +109,3 @@ pauseButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
     toggleClock(true);
 })
-*/
