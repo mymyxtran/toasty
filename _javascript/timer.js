@@ -10,8 +10,6 @@ const lBreakState = -3;
 var timeLeft = 25*60;
 var timerRunning = false;
 var currState = workState;
-document.getElementById("mins").innerHTML = "25"
-document.getElementById("secs").innerHTML = "00"
 
 //Listeners
 /*
@@ -20,6 +18,11 @@ const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 const stopButton = document.querySelector('#stop');
 */
+
+function Affirm(){
+    alert("Stay Strong! Doing good :)");
+
+}
 
 document.querySelector('#stop').onclick = function(){
     currState = workState;
