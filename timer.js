@@ -10,7 +10,7 @@ const lBreakState = -3;
 var timeLeft = 25*60;
 var timerRunning = false;
 var currState = workState;
-var affirmOn = false;
+let affirmOn = false;
 
 //Listeners
 
