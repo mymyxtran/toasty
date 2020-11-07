@@ -29,7 +29,7 @@ const displayCurrentTimeLeft = () => {
     }
 
     let result = `${addLeadingZeros(minutes)} : ${addLeadingZeros(seconds)}`;
-    document.getElementById('time-output').innerHTML = result;
+    document.getElementById('time-output').innerHTML = result.toString();
 
 
 }
