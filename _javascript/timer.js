@@ -14,10 +14,21 @@ document.getElementById("mins").innerHTML = "25"
 document.getElementById("secs").innerHTML = "00"
 
 //Listeners
+/*
 const pomodoroTimer = document.querySelector('#pomodoro-timer');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 const stopButton = document.querySelector('#stop');
+*/
+
+document.querySelector('#stop').onclick = function(){
+    currState = workState;
+    timeLeft = workingTimeTotal;
+    timerRunning = false;
+    clearInterval(timerHandler);
+    document.getElementById("mins").innerHTML = "25"
+    document.getElementById("secs").innerHTML = "00"   
+}
 
 const displayCurrentTimeLeft = () => {
     var seconds = timeLeft%60;
@@ -72,6 +83,7 @@ const toggleClock = (reset) => {
     }
 }
 
+/*
 // Start
 startButton.addEventListener('click', () => {
     toggleClock();
@@ -86,3 +98,4 @@ pauseButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
     toggleClock(true);
 })
+*/
