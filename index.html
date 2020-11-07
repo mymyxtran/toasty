@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toasty</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Toasty</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   </head>
-<style>
-  /*configure background with*/
-  body {
-    background-image: url('photoss/tree.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: cover; 
-  }
-</style> 
+
+  <style>
+    /*configure background with*/
+    body {
+      background-image: url('photos/tree.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: cover; 
+    }
+    /* Create three unequal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 7px;
+    }
+
+    /* Left and right column */
+    .column.side {
+      width: 33.3%;
+    }
+      /* Middle column */
+      .column.middle {
+        width: 33.3%;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+  </style> 
+
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title"> Stay <strong>Toasty 🔥</strong> </h1>
+      
+      </div>
+    </section>
 
 
 
-
-      </h1>
-      <p class="subtitle">
-        ~Stay <strong>Toasty</strong> 🔥~
-
-        
-
-
-
-
-
-
-
-      </p>
-    </div>
-    <div id="pomodoro-container">
-      <div id="pomodoro-timer">
-        <div id="time-output">
-          <span id="time-result">25:00</span>
+    <div class="row">
+      <div class="column side">
+        <h2>Toasty Timer 🔥</h2>
+        <div id="pomodoro-container">
+          <div id="pomodoro-timer">
+            span id="time-result">25:00</span>
+          </div>
+          <div id="pomodoro-buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+          </div>
         </div>
       </div>
       
-      <div id="pomodoro-buttons">
-        <button id="start">Start</button>
-        <button id="pause">Pause</button>
-        <button id="stop">Stop</button>
+      <div class="column middle">
+        <h2>Empty</h2>
+      </div>
+      
+      <div class="column side">
+        <h2>To Do</h2>
+        <p>Things I need to do</p>
       </div>
     </div>
-  </section>
+
+
+
   </body>
+
+
 </html>
