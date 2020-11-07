@@ -9,13 +9,19 @@
 
   <style>
     /*configure background with*/
-    body {
-      background-image: url('photos/tree.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed; 
-      background-size: cover; 
-      margin: 20;
-}
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .background {
+        /*the image to use*/
+        background-image: url('photos/fireplace_cabin.png');
+        /*full height*/
+        height: 50%;
+        /* Center and scale the image nicely */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
     }
     /* Create three unequal columns that floats next to each other */
     .column {
@@ -42,53 +48,54 @@
 
   <body>
 
-    <section class="section">
-      <div class="container">
-        <h1 class="title"> Stay <strong>Toasty 🔥</strong> </h1>
-      
-      </div>
-    </section>
+    <div class="background">
 
-    <div class="row">
-      <div class="column side">
-        <h2>Toasty Timer 🔥</h2>
-        <h3>Time left:</h3>
-        <div id="pomodoro-container">
-          <div id="pomodoro-timer">
-            <p id ="mins"></p>
-            <p id="colon">:</p>
-            <p id="secs"></p>
-          </div>
-          <div id="pomodoro-buttons">
-            <button id="start">Start Working</button>
-            <button id="pause">Pause</button>
-            <button id="stop">Stop</button>
+      <section class="section">
+        <div class="container">
+          <h1 class="title"> Stay <strong>Toasty 🔥</strong> </h1>
+        
+        </div>
+      </section>
+
+      <div class="row">
+        <div class="column side">
+          <h2>Toasty Timer 🔥</h2>
+          <div id="pomodoro-container">
+            <div id="pomodoro-timer">
+              <p id ="mins"></p>
+              <p id="colon">:</p>
+              <p id="secs"></p>
+            </div>
+            <div id="pomodoro-buttons">
+              <button id="start">Start Working</button>
+              <button id="pause">Pause</button>
+              <button id="stop">Stop</button>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="column middle">
-        <h2>Things done!</h2>
-      </div>
-      
-      <div class="column side">
-        <h2>To Do</h2>
-        <p >Things I need to do</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
+        
+        <div class="column middle">
+          <h2>Things done!</h2>
+        </div>
+        
+        <div class="column side">
+          <h2>To Do</h2>
+          <p >Things I need to do</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
       </div>
     </div>
-
 
 
   </body>
