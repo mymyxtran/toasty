@@ -23,27 +23,7 @@
         background-position: center;
         background-size: cover; 
     }
-    /* Create three unequal columns that floats next to each other */
-    .column {
-      float: left;
-      padding: 10px;
-    }
 
-    /* Left and right column */
-    .column.side {
-      width: 25%;
-    }
-      /* Middle column */
-      .column.middle {
-        width: 50%;
-      }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
   </style> 
 
   <body>
@@ -60,9 +40,10 @@
         </div>
       </section>
 
-      <div class="row">
-        <div class="column side">
-          <h2 class="has-text-white">Toasty Timer 🔥</h2>
+    <div class="columns">
+
+      <div class="column">
+        <h2 class="has-text-white">Toasty Timer 🔥</h2>
           <div id="pomodoro-container">
             <div id="pomodoro-timer">
               <p class="has-text-white" id ="mins"></p>
@@ -76,33 +57,22 @@
               <button id="affirm", onclick="Affirm()">Affirmation</button>
               <p class="has-text-white" id="Affirming"></p>
             </div>
-          </div>
-        </div>
-        
-        <div class="column middle">
-          <h2 class="has-text-white">Things done!</h2>
-        </div>
-        
-        <div class="column side">
-          <h2 class="has-text-white">To Do</h2>
-          <p class="has-text-white">Things I need to do</p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
         </div>
       </div>
+
+      <div class="column">
+        <h2 class="has-text-white">Things done!</h2>
+      </div>
+
+      <div class="column">
+        Third column
+      </div>
+
+      <div class="column">
+        <p class="has-text-white">Things I need to do</p>
+      </div>
+
     </div>
-
-
   </body>
 
 
