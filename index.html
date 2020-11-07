@@ -9,13 +9,19 @@
 
   <style>
     /*configure background with*/
-    body {
-      background-image: url('photos/tree.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed; 
-      background-size: cover; 
-      margin: 20;
-}
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .background {
+        /*the image to use*/
+        background-image: url('photos/tree.png');
+        /*full height*/
+        height: 50%;
+        /* Center and scale the image nicely */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
     }
     /* Create three unequal columns that floats next to each other */
     .column {
@@ -41,6 +47,8 @@
   </style> 
 
   <body>
+
+    <div class="background"></div>
 
     <section class="section">
       <div class="container">
