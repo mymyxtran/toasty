@@ -20,7 +20,7 @@ const stopButton = document.querySelector('#stop');
 */
 
 function Affirm(){
-    alert("Stay Strong! Doing good :)");
+    document.getElementById("Affirming").innerHTML = "You're doing great!";
 
 }
 
