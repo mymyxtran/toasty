@@ -4,7 +4,107 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My first Bulma website</title>
+    <title>Toasty</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
+  <body>
+    <section class="hero is-medium is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <h1 class="title is-2 is-spaced">
+                Hello Bulma!
+              </h1>
+              <h2 class="subtitle is-4">
+                  Congratulations! You're running the <strong>Bulma start</strong> project.
+                  <br>
+                  It includes everything you need to <strong>build your own website</strong> with Bulma.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+              <h3>What's included</h3>
+              <p>
+                The <code>npm</code> dependencies included in <code>package.json</code> are:
+              </p>
+              <ul>
+                <li>
+                  <code><a href="https://github.com/jgthms/bulma">bulma</a></code>
+                </li>
+                <li>
+                  <code><a href="https://github.com/sass/node-sass">node-sass</a></code> to compile your own Sass file
+                </li>
+                <li>
+                  <code><a href="https://github.com/postcss/postcss-cli">postcss-cli</a></code> and <code><a href="https://github.com/postcss/autoprefixer">autoprefixer</a></code> to add support for older browsers
+                </li>
+                <li>
+                  <code><a href="https://babeljs.io/docs/usage/cli/">babel-cli</a></code>,
+                  <code><a href="https://github.com/babel/babel-preset-env">babel-preset-env</a></code>
+                  and
+                  <code><a href="https://github.com/jmcriffey/babel-preset-es2015-ie">babel-preset-es2015-ie</a></code>
+                  for compiling ES6 JavaScript files
+                </li>
+              </ul>
+              <p>
+                Apart from <code>package.json</code>, the following files are included:
+              </p>
+              <ul>
+                <li>
+                  <code>.babelrc</code> configuration file for <a href="https://babeljs.io/">Babel</a>
+                </li>
+                <li>
+                  <code>.gitignore</code> common <a href="https://git-scm.com/">Git</a> ignored files
+                </li>
+                <li>
+                  <code>index.html</code> this HTML5 file
+                </li>
+                <li>
+                  <code>_sass/main.scss</code> a basic SCSS file that <strong>imports Bulma</strong> and explains how to <strong>customize</strong> your styles, and compiles to <code>css/main.css</code>
+                </li>
+                <li>
+                  <code>_javascript/main.js</code> an ES6 JavaScript that compiles to <code>lib/main.js</code>
+                </li>
+              </ul>
+              <h3>Try it out!</h3>
+              <p>
+                To see if your setup works, follow these steps:
+              </p>
+              <ol>
+                <li>
+                  <p>
+                    <strong>Move</strong> to this directory:
+                    <br>
+                    <pre><code>cd bulma-start</code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Install</strong> all dependencies:
+                    <br>
+                    <pre><code>npm install</code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Start</strong> the CSS and JS watchers:
+                    <br>
+                    <pre><code>npm start</code></pre>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Edit</strong> <code>_sass/main.scss</code> by adding the following rule at the <strong>end</strong> of the file:
+                    <br>
+                    <pre><span style="color: #22863a;">html</span> {
+  <span style="color: #005cc5;"><span style="color: #005cc5;">background-color</span></span>: <span style="color: #24292e">$green</span>;
+}</pre>
+                
 </html>
