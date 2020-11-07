@@ -73,7 +73,7 @@ function stopTimer(){
     displayCurrentTimeLeft;
 }
 
-const toggleClock = (reset) => {
+function toggleClock (reset){
     if(reset){
         stopTimer();
     }else{
