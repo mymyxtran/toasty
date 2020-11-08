@@ -156,15 +156,10 @@
     }
 
     .timerCircle {
-      background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-      background-color: red;
-      border: 2px solid white;
-      border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
-      box-shadow: 1px 1px 1px black;
+      border: 3px solid white;
+      border-radius: 100%; /* one half of ( (border * 2) + height + padding ) */
       color: white;
-      font: bold 15px/13px Helvetica, Verdana, Tahoma;
-      height: 16px; 
-      min-width: 14px;
+      font: bold 35px;
       padding: 4px 3px 0 3px;
       text-align: center;
   }
@@ -189,7 +184,7 @@
       <div class="column">
         <h2 class="has-text-white">Toasty Timer 🔥</h2>
           <div id="pomodoro-container">
-            <div style="font-size: 25px;" class="has-text-white" id="pomodoro-timer">25:00</div>
+            <div class="timerCircle" id="pomodoro-timer">25:00</div>
             <div id="pomodoro-buttons">
               <button class = "pomoButtons" id="start" onclick="toggleClock(false)">Start Working!</button>
               <button class = "pomoButtons" id="pause", onclick="toggleClock(false)">Pause</button>
