@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
       <script src="toasty_modules/timer.js"></script>
       <script src="toasty_modules/checklist.js"></script>
+      <script src="toast_modules/changeBackgroundOption.js"></script>
 
   </head>
 
@@ -20,7 +21,7 @@
     .columns{
       margin: 15px ;
     }
-    .background {
+    .background.active-class {
         /*the image to use*/
         background-image: url('photos/fireplace_cabin.gif');
         background-color: #555;
@@ -218,7 +219,6 @@
         </div>
       </div>
 
-
       <div class="column">
         <div class="box">
               <div class="content">
@@ -238,6 +238,15 @@
       </div> 
 
     </div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <button class="my-button">Toggle background.</button>
+          <strong>Toasty</strong> by @eyf + @mymyxtran.
+        </p>
+      </div>
+    </footer>
 
   
   </body>
