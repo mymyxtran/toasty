@@ -1,18 +1,12 @@
 
 
-function toggleBG(element){
-    var arrow = element
-    if(arrow.className == 'background_one'){
-
-        arrow.className = 'background_two';
-  
-      } else {
-  
-        arrow.className = 'background_one';
-  
-      }
-  
+function toggleBG(){
+var element = document.getElementsById("background_1");
+  element.className = "background_two";
 }
+// window.onload = function(){
+//     document.getElementById("myElement").addEventListener( 'click', toggleBG);
+// }
 
 
 
