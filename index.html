@@ -200,63 +200,63 @@
         </div>
       </section>
 
-    <div class="columns">
+      <div class="columns">
 
-      <div class="column">
-        <h2 class="has-text-white">Toasty Timer 🔥</h2>
-          <div id="pomodoro-container">
-            <div class="timerCircle" id="pomodoro-timer">25:00</div>
-            <div id="pomodoro-buttons">
-              <button class = "pomoButtons" id="start" onclick="toggleClock(false)">Start Working!</button>
-              <button class = "pomoButtons" id="pause", onclick="toggleClock(false)">Pause</button>
-              <button class = "pomoButtons" id="reset" onclick="toggleClock(true)">Reset</button>
-              <button class = "pomoButtons" id="affirm", onclick="Affirm()">Affirmation</button>
-              <p class="has-text-white" id="Affirming"><br></p>
-              <p class="has-text-white" id="numSessions">Sessions completed so far: 0 (You're getting there though!)</p>
+        <div class="column">
+          <h2 class="has-text-white">Toasty Timer 🔥</h2>
+            <div id="pomodoro-container">
+              <div class="timerCircle" id="pomodoro-timer">25:00</div>
+              <div id="pomodoro-buttons">
+                <button class = "pomoButtons" id="start" onclick="toggleClock(false)">Start Working!</button>
+                <button class = "pomoButtons" id="pause", onclick="toggleClock(false)">Pause</button>
+                <button class = "pomoButtons" id="reset" onclick="toggleClock(true)">Reset</button>
+                <button class = "pomoButtons" id="affirm", onclick="Affirm()">Affirmation</button>
+                <p class="has-text-white" id="Affirming"><br></p>
+                <p class="has-text-white" id="numSessions">Sessions completed so far: 0 (You're getting there though!)</p>
+              </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="block">
+          <h2 class="has-text-white">Tunes</h2>
+          <audio src="music/CozyChristmasJazzy.mp3" controls>	
+            <p>Fallback content goes here.</p>
+            </audio>
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWU0r6G8OGirN" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="box">
+                <div class="content">
+                  <p>
+                    <strong>To Do List </strong>
+                    <br> 
+                    <div id="myDIV" class="header">
+                      <h2>My To Do List</h2>
+                      <input type="text" id="myInput" placeholder="Title...">
+                      <span onclick="newElement()" class="addBtn">Add</span>
+                    </div>
+                    <ul id="myUL">
+                  </p>
+                </div>   
             </div>
         </div>
+        </div> 
+
       </div>
 
-      <div class="column">
-        <div class="block">
-        <h2 class="has-text-white">Tunes</h2>
-        <audio src="music/CozyChristmasJazzy.mp3" controls>	
-          <p>Fallback content goes here.</p>
-          </audio>
-          <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWU0r6G8OGirN" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <button id="changeBG">Toggle background.</button>
+            <strong>Toasty</strong> by @eyf + @mymyxtran.
+          </p>
         </div>
-      </div>
-
-      <div class="column">
-        <div class="box">
-              <div class="content">
-                <p>
-                  <strong>To Do List </strong>
-                  <br> 
-                  <div id="myDIV" class="header">
-                    <h2>My To Do List</h2>
-                    <input type="text" id="myInput" placeholder="Title...">
-                    <span onclick="newElement()" class="addBtn">Add</span>
-                  </div>
-                  <ul id="myUL">
-                </p>
-              </div>   
-          </div>
-       </div>
-      </div> 
-
+      </footer>
     </div>
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <button id="changeBG">Toggle background.</button>
-          <strong>Toasty</strong> by @eyf + @mymyxtran.
-        </p>
-      </div>
-    </footer>
-
   
   </body>
 
