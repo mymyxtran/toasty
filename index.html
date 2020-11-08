@@ -260,22 +260,22 @@
   
   </body>
   <script>
-  // $().ready(function() {
-  //   $("changeBG").click(function() {
-  //     $(".background").toggleClass("active");
-  //   });
-  // });
+  $(document).ready(function() {
+    $("changeBG").click(function() {
+      $(".background").toggleClass("active");
+    });
+  });
 
-  document.getElementById('changeBG').onclick = function() {
+  // document.getElementById('changeBG').onclick = function() {
 
-  var className = ' ' + myButton.className + ' ';
+  // var className = ' ' + myButton.className + ' ';
 
-  if ( ~className.indexOf(' active ') ) {
-      this.className = className.replace(' active ', ' ');
-  } else {
-      this.className += ' active';
-  }              
-  }
+  // if ( ~className.indexOf(' active ') ) {
+  //     this.className = className.replace(' active ', ' ');
+  // } else {
+  //     this.className += ' active';
+  // }              
+  // }
 </script>
 
 
