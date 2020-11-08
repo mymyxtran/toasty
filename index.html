@@ -33,7 +33,7 @@
         background-size: cover; 
     }
     .background_two {
-        background-image: url('snowy_fest.gif');
+        background-image: url('photos/snowy_fest.gif');
         background-color: #555;
         /*full height*/
         height: 100%;
@@ -189,13 +189,6 @@
   <body>
 
     <div class="background_one" id= "background_uno">
-      <script>
-        function toggleBG() {
-          //  var element = document.getElementById("background_uno");
-          //  element.classList.toggle("background_two");
-           document.getElementById("background_uno").className = "background_two";
-        }
-        </script>
 
       <section class="section">
         <div class="container">
@@ -259,11 +252,19 @@
         <div class="content has-text-centered">
           <p>
             <button onclick ="toggleBG()">Toggle background.</button>
-            <strong>Toasty</strong> by @eyfb + @mymyxtran. 🌟
+            <strong>Toasty</strong> by @eyfb + @mymyxtran. 
           </p>
         </div>
       </footer>
     </div>
+    <script>
+      function toggleBG() {
+        var element = document.getElementById("background_uno");
+        //  element.classList.toggle("background_two");
+        if()
+         document.getElementById("background_uno").className = "background_two";
+      }
+      </script>
     
   
   </body>
