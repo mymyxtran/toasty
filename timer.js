@@ -4,6 +4,7 @@ const shortBreakTime = 5*60;
 const workState = -1;
 const sBreakState = -2;
 const lBreakState = -3;
+const pauseState = -4;
 
 
 // Variables
@@ -80,6 +81,8 @@ function toggleClock (reset){
         if(!timerRunning){
             // start timer
             timerRunning = !timerRunning;
+            currState = workState;
+            document.getElementById("start").innerHTML = "Keep Working";
             timerHandler = setInterval(() => {
                 timeLeft--;
                 displayCurrentTimeLeft();
@@ -104,6 +107,7 @@ function toggleClock (reset){
             // stop timer
             clearInterval(timerHandler);
             timerRunning = !timerRunning;
+            currState = pauseState;
         }
         
     }
