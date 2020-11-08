@@ -47,11 +47,7 @@ const displayCurrentTimeLeft = () => {
     var minutes = Math.floor(timeLeft/60);
 
     function addLeadingZeros (time) {
-        if (time < 10){
-            return `0{time}`;
-        }else{
-            return time;
-        }
+        return (time < 10) ? `0${time}` : time
     }
 
     //minutes = addLeadingZeros(minutes);
@@ -89,6 +85,21 @@ function toggleClock (reset){
             timerHandler = setInterval(() => {
                 timeLeft--;
                 displayCurrentTimeLeft();
+                if(timeLeft == 0){
+                    // stop the timer
+                    clearInterval(timerHandler);
+                    timerRunning = false;
+                    // Swap states!
+                    if(currState == workState){
+                        currState = sBreakState;
+                        timeLeft = shortBreakTime;
+                        document.getElementById("start").innerHTML = "Start Break!";
+                    }else if(currState == sBreakState){
+                        currState = workState;
+                        timeLeft = workingTimeTotal;
+                        document.getElementById("start").innerHTML = "Start Working";
+                    }
+                }
             }, 1000)
             
         }else{
