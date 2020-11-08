@@ -12,6 +12,7 @@ var timeLeft = workingTimeTotal;
 var timerRunning = false;
 var currState = workState;
 let affirmOn = false;
+var numberSessions = 0;
 
 //Listeners
 
@@ -92,6 +93,8 @@ function toggleClock (reset){
                     timerRunning = false;
                     // Swap states!
                     if(currState == workState){
+                        numberSessions ++;
+                        document.getElementById("numSessions").innerHTML = `Sessions completed so far: ${numberSessions}`;
                         currState = sBreakState;
                         timeLeft = shortBreakTime;
                         document.getElementById("start").innerHTML = "Start Break!";
