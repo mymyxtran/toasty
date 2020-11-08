@@ -30,20 +30,6 @@ function Affirm(){
 
 }
 
-var seconds = 0;
-var interval;
-function pomodoro(mins) {
-   seconds = mins*5 || 0;     
-   interval = setInterval(function() {
-        seconds--;
-        if(!seconds){
-             clearInterval(interval); 
-             alert("🚨 It is Cool 😎. I wish you could share ");
-        }
-   },1000)
-}
-
-
 
 /*
 document.querySelector('#stop').onclick = function(){
@@ -73,7 +59,7 @@ const displayCurrentTimeLeft = () => {
     //document.getElementById("mins").innerHTML = minutes.toString
    // document.getElementById("secs").innerHTML = seconds.toString
     //let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
-    let result = `${minutes}:${seconds}`;
+    let result = `${addLeadingZeros(minutes)}:${addLeadingZeros(seconds)}`;
     document.getElementById("pomodoro-timer").innerHTML = result.toString();
 
 
