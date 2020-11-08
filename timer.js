@@ -1,6 +1,6 @@
 // Constants
-const workingTimeTotal = 25*60;
-const shortBreakTime = 5*60;
+const workingTimeTotal = /*25*60*/ 10;
+const shortBreakTime = /*5*60*/ 8;
 const workState = -1;
 const sBreakState = -2;
 const lBreakState = -3;
@@ -62,13 +62,11 @@ const displayCurrentTimeLeft = () => {
 }
 
 function stopTimer(){
+    clearInterval(timerHandler);
     currState = workState;
     timeLeft = workingTimeTotal;
     timerRunning = false;
-    clearInterval(timerHandler);
-    //document.getElementById("mins").innerHTML = "25"
-    //document.getElementById("secs").innerHTML = "00"
-    displayCurrentTimeLeft;
+    displayCurrentTimeLeft();
 }
 
 
