@@ -7,7 +7,7 @@ const lBreakState = -3;
 
 
 // Variables
-var timeLeft = 25*60;
+var timeLeft = workingTimeTotal;
 var timerRunning = false;
 var currState = workState;
 let affirmOn = false;
