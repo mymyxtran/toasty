@@ -1,7 +1,7 @@
 
 
 function toggleBG(){
-var element = document.getElementsById("background_1");
+var element = document.getElementById("background_1");
   element.className = "background_two";
 }
 // window.onload = function(){
