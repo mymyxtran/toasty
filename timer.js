@@ -110,7 +110,7 @@ function toggleClock (reset){
             // stop timer
             clearInterval(timerHandler);
             timerRunning = !timerRunning;
-            currState = pauseState;
+            //currState = pauseState;
         }
         
     }
