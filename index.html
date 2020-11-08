@@ -21,7 +21,7 @@
     .columns{
       margin: 15px ;
     }
-    .background {
+    .background_one {
         /*the image to use*/
         background-image: url('photos/fireplace_cabin.gif');
         background-color: #555;
@@ -32,7 +32,7 @@
         background-position: center;
         background-size: cover; 
     }
-    .active {
+    .background_two {
         background-image: url('photos/snowy_fest.gif');
         background-color: #555;
         /*full height*/
@@ -188,7 +188,7 @@
 
   <body>
 
-    <div class="background" id = "bg">
+    <div class="background_one">
 
       <section class="section">
         <div class="container">
@@ -251,7 +251,7 @@
       <footer class="footer">
         <div class="content has-text-centered">
           <p>
-            <button class = "changingBG" id="changeBG" onclick="toggleBG()">Toggle background.</button>
+            <button class = "changingBG" onclick="toggleBG(this)">Toggle background.</button>
             <strong>Toasty</strong> by @eyf + @mymyxtran.
           </p>
         </div>

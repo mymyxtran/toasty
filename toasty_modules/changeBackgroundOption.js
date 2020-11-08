@@ -1,8 +1,17 @@
 
 
-function toggleBG (){
-    document.getElementById(toggleBG).innerHTML = "Changed Background";
-    document.body.style.backgroundImage = 'url(snowy_fest.gif)';  
+function toggleBG(element){
+    var arrow = element
+    if(arrow.className == 'background_one'){
+
+        arrow.className = 'background_two';
+  
+      } else {
+  
+        arrow.className = 'background_one';
+  
+      }
+  
 }
 
 
