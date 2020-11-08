@@ -156,11 +156,12 @@
     }
 
     .timerCircle {
-      border: 3px solid white;
+      border: 5px solid white;
       border-radius: 100%; /* one half of ( (border * 2) + height + padding ) */
+      width: 38%;
       color: white;
-      font: bold 35px;
-      padding: 4px 3px 0 3px;
+      font: bold 50px;
+      padding: 5px;
       text-align: center;
   }
   </style> 
@@ -190,7 +191,7 @@
               <button class = "pomoButtons" id="pause", onclick="toggleClock(false)">Pause</button>
               <button class = "pomoButtons" id="reset" onclick="toggleClock(true)">Reset</button>
               <button class = "pomoButtons" id="affirm", onclick="Affirm()">Affirmation</button>
-              <p class="has-text-white" id="Affirming"></p>
+              <p class="has-text-white" id="Affirming"><br></p>
               <p class="has-text-white" id="numSessions">Sessions completed so far: 0 (You're getting there though!)</p>
             </div>
         </div>
