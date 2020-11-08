@@ -33,7 +33,7 @@
         background-size: cover; 
     }
     .background_two {
-        background-image: url('photos/snowy_fest.gif');
+        background-image: url('snowy_fest.gif');
         background-color: #555;
         /*full height*/
         height: 100%;
@@ -189,6 +189,13 @@
   <body>
 
     <div class="background_one" id= "background_uno">
+      <script>
+        function toggleBG() {
+          //  var element = document.getElementById("background_uno");
+          //  element.classList.toggle("background_two");
+           document.getElementById("background_uno").className = "background_two";
+        }
+        </script>
 
       <section class="section">
         <div class="container">
@@ -257,13 +264,7 @@
         </div>
       </footer>
     </div>
-    <script>
-      function toggleBG() {
-        //  var element = document.getElementById("background_uno");
-        //  element.classList.toggle("background_two");
-         document.getElementById("background_uno").className = "background_two";
-      }
-      </script>
+    
   
   </body>
 
