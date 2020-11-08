@@ -1,6 +1,6 @@
-jQuery(function($) {
-    $('.my-button').click(function() {
-        $('.background').toggleClass('active-class');
-        return false;
-    });
-});
+var button = document.getElementById("changeBG"); 
+var body = document.getElementsByTagName("body");	 
+ 
+button.addEventListener("changeBG", function () { 
+body[0].style.backgroundImage = "./photos/snow_fest.gif" 
+}); 
