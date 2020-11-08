@@ -82,7 +82,7 @@ function toggleClock (reset){
             // start timer
             timerRunning = !timerRunning;
             currState = workState;
-            document.getElementById("start").innerHTML = "Keep Working";
+            document.getElementById("start").innerHTML = "Keep Working!;
             timerHandler = setInterval(() => {
                 timeLeft--;
                 displayCurrentTimeLeft();
