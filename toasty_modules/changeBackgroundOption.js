@@ -1,7 +1,7 @@
-$(document).ready(function() {
-    $("changeBG").click(function() {
-      $(".background").toggleClass("active");
-    });
-  });
+// $(document).ready(function() {
+//     $("changeBG").click(function() {
+//       $(".background").toggleClass("active");
+//     });
+//   });
 
  
