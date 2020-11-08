@@ -7,7 +7,7 @@ const lBreakState = -3;
 
 
 // Variables
-var timeLeft = workingTimeTotal;
+var timeLeft = 10;
 var timerRunning = false;
 var currState = workState;
 let affirmOn = false;
@@ -24,7 +24,7 @@ function Affirm(){
     if(!affirmOn){
         document.getElementById("Affirming").innerHTML = "You're doing great!";
     }else{
-        document.getElementById("Affirming").innerHTML = "Keep at it!";
+        document.getElementById("Affirming").innerHTML = "Stay strong :)";
     }
     affirmOn = !affirmOn;
 
@@ -83,7 +83,7 @@ function toggleClock (reset){
             timerHandler = setInterval(() => {
                 timeLeft--;
                 displayCurrentTimeLeft();
-                if(timeLeft == 0){
+                if(timeLeft == workingTimeTotal - 5){
                     // stop the timer
                     clearInterval(timerHandler);
                     timerRunning = false;
