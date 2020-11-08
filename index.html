@@ -32,7 +32,7 @@
         background-position: center;
         background-size: cover; 
     }
-    .background.active {
+    .active {
         background-image: url('photos/snowy_fest.gif');
         background-color: #555;
         /*full height*/
@@ -251,7 +251,7 @@
       <footer class="footer">
         <div class="content has-text-centered">
           <p>
-            <button class="changeBG">Toggle background.</button>
+            <button id="changeBG">Toggle background.</button>
             <strong>Toasty</strong> by @eyf + @mymyxtran.
           </p>
         </div>
@@ -260,11 +260,22 @@
   
   </body>
   <script>
-  $(document).ready(function() {
-    $("changeBG").click(function() {
-      $(".background").toggleClass("active");
-    });
-  });
+  // $().ready(function() {
+  //   $("changeBG").click(function() {
+  //     $(".background").toggleClass("active");
+  //   });
+  // });
+
+  document.getElementById('changeBG').onclick = function() {
+
+  var className = ' ' + myButton.className + ' ';
+
+  if ( ~className.indexOf(' active ') ) {
+      this.className = className.replace(' active ', ' ');
+  } else {
+      this.className += ' active';
+  }              
+  }
 </script>
 
 
