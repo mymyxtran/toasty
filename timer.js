@@ -1,13 +1,13 @@
 // Constants
-const workingTimeTotal = /*25*60*/ 10;
-const shortBreakTime = /*5*60*/ 8;
+const workingTimeTotal = 25*60;
+const shortBreakTime = 5*60;
 const workState = -1;
 const sBreakState = -2;
 const lBreakState = -3;
 
 
 // Variables
-var timeLeft = 10;
+var timeLeft = workingTimeTotal;
 var timerRunning = false;
 var currState = workState;
 let affirmOn = false;
@@ -83,7 +83,7 @@ function toggleClock (reset){
             timerHandler = setInterval(() => {
                 timeLeft--;
                 displayCurrentTimeLeft();
-                if(timeLeft == workingTimeTotal - 5){
+                if(timeLeft == 0){
                     // stop the timer
                     clearInterval(timerHandler);
                     timerRunning = false;
